@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vanguard Advisory SA | Legal · Transfer Pricing · Procurement · Career Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,300&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+–navy: #0F1F3D;
+–navy-mid: #162844;
+–gold: #C9A84C;
+–gold-light: #E8C97A;
+–gold-pale: #F5EDD6;
+–cream: #FAF8F4;
+–white: #FFFFFF;
+–gray: #64748B;
+–light: #F1EEE8;
+–text: #1E293B;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+font-family: ‘DM Sans’, sans-serif;
+color: var(–text);
+background: var(–white);
+overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+position: fixed;
+top: 0; left: 0; right: 0;
+z-index: 100;
+padding: 0 5%;
+height: 72px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+background: rgba(15, 31, 61, 0.97);
+backdrop-filter: blur(12px);
+border-bottom: 1px solid rgba(201,168,76,0.2);
+}
+
+.nav-logo {
+font-family: ‘Fraunces’, serif;
+font-size: 20px;
+font-weight: 600;
+color: var(–white);
+letter-spacing: -0.3px;
+}
+
+.nav-logo span { color: var(–gold); }
+
+.nav-links {
+display: flex;
+gap: 36px;
+list-style: none;
+}
+
+.nav-links a {
+text-decoration: none;
+font-size: 13.5px;
+font-weight: 500;
+color: rgba(255,255,255,0.7);
+letter-spacing: 0.3px;
+transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(–gold); }
+
+.nav-cta {
+background: var(–gold);
+color: var(–navy) !important;
+padding: 9px 20px;
+border-radius: 4px;
+font-weight: 600 !important;
+color: var(–navy) !important;
+transition: background 0.2s !important;
+}
+
+.nav-cta:hover { background: var(–gold-light) !important; color: var(–navy) !important; }
+
+/* ── HERO ── */
+.hero {
+min-height: 100vh;
+background: var(–navy);
+display: flex;
+align-items: center;
+padding: 120px 5% 80px;
+position: relative;
+overflow: hidden;
+}
+
+.hero::before {
+content: ‘’;
+position: absolute;
+top: -200px; right: -200px;
+width: 700px; height: 700px;
+border-radius: 50%;
+background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+}
+
+.hero::after {
+content: ‘’;
+position: absolute;
+bottom: -100px; left: -100px;
+width: 400px; height: 400px;
+border-radius: 50%;
+background: radial-gradient(circle, rgba(201,168,76,0.05) 0%, transparent 70%);
+}
+
+.hero-inner {
+max-width: 1100px;
+margin: 0 auto;
+width: 100%;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 80px;
+align-items: center;
+position: relative;
+z-index: 1;
+}
+
+.hero-tag {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+font-size: 11px;
+font-weight: 600;
+letter-spacing: 3px;
+text-transform: uppercase;
+color: var(–gold);
+margin-bottom: 24px;
+}
+
+.hero-tag::before {
+content: ‘’;
+width: 24px; height: 2px;
+background: var(–gold);
+}
+
+.hero h1 {
+font-family: ‘Fraunces’, serif;
+font-size: clamp(40px, 5vw, 62px);
+font-weight: 700;
+color: var(–white);
+line-height: 1.1;
+margin-bottom: 24px;
+letter-spacing: -1px;
+}
+
+.hero h1 em {
+font-style: italic;
+color: var(–gold);
+font-weight: 300;
+}
+
+.hero-desc {
+font-size: 16px;
+color: rgba(255,255,255,0.65);
+line-height: 1.75;
+margin-bottom: 40px;
+font-weight: 300;
+max-width: 440px;
+}
+
+.hero-btns {
+display: flex;
+gap: 16px;
+flex-wrap: wrap;
+}
+
+.btn-primary {
+background: var(–gold);
+color: var(–navy);
+padding: 14px 28px;
+border-radius: 4px;
+font-size: 14px;
+font-weight: 600;
+text-decoration: none;
+transition: background 0.2s, transform 0.2s;
+display: inline-block;
+}
+
+.btn-primary:hover { background: var(–gold-light); transform: translateY(-1px); }
+
+.btn-secondary {
+border: 1px solid rgba(255,255,255,0.25);
+color: rgba(255,255,255,0.85);
+padding: 14px 28px;
+border-radius: 4px;
+font-size: 14px;
+font-weight: 500;
+text-decoration: none;
+transition: border-color 0.2s, color 0.2s;
+display: inline-block;
+}
+
+.btn-secondary:hover { border-color: var(–gold); color: var(–gold); }
+
+/* Hero right - credentials card */
+.hero-card {
+background: rgba(255,255,255,0.04);
+border: 1px solid rgba(201,168,76,0.2);
+border-radius: 12px;
+padding: 40px;
+}
+
+.hero-card-title {
+font-size: 11px;
+font-weight: 600;
+letter-spacing: 2.5px;
+text-transform: uppercase;
+color: var(–gold);
+margin-bottom: 28px;
+}
+
+.credential-group {
+margin-bottom: 28px;
+}
+
+.credential-group-label {
+font-size: 10px;
+font-weight: 600;
+letter-spacing: 2px;
+text-transform: uppercase;
+color: rgba(255,255,255,0.35);
+margin-bottom: 12px;
+}
+
+.credential-list {
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+
+.credential-item {
+display: flex;
+align-items: center;
+gap: 10px;
+font-size: 13.5px;
+color: rgba(255,255,255,0.8);
+font-weight: 400;
+}
+
+.credential-item::before {
+content: ‘’;
+width: 6px; height: 6px;
+border-radius: 50%;
+background: var(–gold);
+flex-shrink: 0;
+}
+
+.hero-divider {
+height: 1px;
+background: rgba(201,168,76,0.15);
+margin: 24px 0;
+}
+
+/* ── SECTION BASE ── */
+section { padding: 100px 5%; }
+
+.section-inner {
+max-width: 1100px;
+margin: 0 auto;
+}
+
+.section-tag {
+font-size: 11px;
+font-weight: 600;
+letter-spacing: 3px;
+text-transform: uppercase;
+color: var(–gold);
+margin-bottom: 16px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.section-tag::before {
+content: ‘’;
+width: 20px; height: 2px;
+background: var(–gold);
+}
+
+.section-title {
+font-family: ‘Fraunces’, serif;
+font-size: clamp(32px, 3.5vw, 46px);
+font-weight: 700;
+color: var(–navy);
+line-height: 1.15;
+letter-spacing: -0.5px;
+margin-bottom: 20px;
+}
+
+.section-title em {
+font-style: italic;
+font-weight: 300;
+color: var(–gold);
+}
+
+.section-body {
+font-size: 16px;
+color: var(–gray);
+line-height: 1.75;
+max-width: 600px;
+font-weight: 300;
+}
+
+/* ── ABOUT ── */
+.about { background: var(–cream); }
+
+.about-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 80px;
+align-items: center;
+margin-top: 60px;
+}
+
+.about-text p {
+font-size: 15.5px;
+color: var(–gray);
+line-height: 1.8;
+margin-bottom: 20px;
+font-weight: 300;
+}
+
+.about-text p strong {
+color: var(–navy);
+font-weight: 600;
+}
+
+.about-stats {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 20px;
+}
+
+.stat-card {
+background: var(–white);
+border: 1px solid var(–light);
+border-top: 3px solid var(–gold);
+padding: 28px 24px;
+border-radius: 4px;
+}
+
+.stat-number {
+font-family: ‘Fraunces’, serif;
+font-size: 40px;
+font-weight: 700;
+color: var(–navy);
+line-height: 1;
+margin-bottom: 8px;
+}
+
+.stat-number span { color: var(–gold); }
+
+.stat-label {
+font-size: 13px;
+color: var(–gray);
+line-height: 1.5;
+font-weight: 400;
+}
+
+/* ── SERVICES ── */
+.services { background: var(–white); }
+
+.services-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 24px;
+margin-top: 60px;
+}
+
+.service-card {
+border: 1px solid var(–light);
+border-radius: 8px;
+padding: 36px;
+position: relative;
+transition: box-shadow 0.25s, transform 0.25s;
+overflow: hidden;
+}
+
+.service-card::before {
+content: ‘’;
+position: absolute;
+top: 0; left: 0; right: 0;
+height: 3px;
+background: var(–gold);
+transform: scaleX(0);
+transform-origin: left;
+transition: transform 0.3s;
+}
+
+.service-card:hover::before { transform: scaleX(1); }
+.service-card:hover { box-shadow: 0 8px 40px rgba(15,31,61,0.08); transform: translateY(-2px); }
+
+.service-icon {
+width: 48px; height: 48px;
+background: var(–gold-pale);
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 20px;
+font-size: 22px;
+}
+
+.service-number {
+position: absolute;
+top: 24px; right: 28px;
+font-family: ‘Fraunces’, serif;
+font-size: 52px;
+font-weight: 700;
+color: var(–light);
+line-height: 1;
+}
+
+.service-title {
+font-family: ‘Fraunces’, serif;
+font-size: 20px;
+font-weight: 600;
+color: var(–navy);
+margin-bottom: 12px;
+line-height: 1.25;
+}
+
+.service-desc {
+font-size: 14px;
+color: var(–gray);
+line-height: 1.75;
+margin-bottom: 20px;
+font-weight: 300;
+}
+
+.service-tags {
+display: flex;
+flex-wrap: wrap;
+gap: 6px;
+margin-bottom: 20px;
+}
+
+.tag {
+background: var(–cream);
+border: 1px solid var(–light);
+font-size: 11.5px;
+font-weight: 500;
+color: var(–navy);
+padding: 4px 10px;
+border-radius: 3px;
+}
+
+.service-pricing {
+font-size: 13px;
+color: var(–gray);
+font-weight: 400;
+padding-top: 16px;
+border-top: 1px solid var(–light);
+}
+
+.service-pricing strong {
+color: var(–gold);
+font-weight: 600;
+}
+
+/* ── CONTACT ── */
+.contact { background: var(–navy); }
+
+.contact .section-title { color: var(–white); }
+.contact .section-body { color: rgba(255,255,255,0.6); }
+.contact .section-tag { color: var(–gold); }
+.contact .section-tag::before { background: var(–gold); }
+
+.contact-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 80px;
+margin-top: 60px;
+align-items: start;
+}
+
+.contact-info {
+display: flex;
+flex-direction: column;
+gap: 24px;
+}
+
+.contact-item {
+display: flex;
+align-items: flex-start;
+gap: 16px;
+}
+
+.contact-icon {
+width: 44px; height: 44px;
+background: rgba(201,168,76,0.12);
+border: 1px solid rgba(201,168,76,0.25);
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
+}
+
+.contact-icon svg { stroke: var(–gold); }
+
+.contact-item-label {
+font-size: 11px;
+font-weight: 600;
+letter-spacing: 1.5px;
+text-transform: uppercase;
+color: rgba(255,255,255,0.35);
+margin-bottom: 4px;
+}
+
+.contact-item-value {
+font-size: 15px;
+color: rgba(255,255,255,0.85);
+font-weight: 400;
+}
+
+.contact-note {
+margin-top: 40px;
+padding: 24px;
+background: rgba(201,168,76,0.08);
+border: 1px solid rgba(201,168,76,0.2);
+border-radius: 8px;
+font-size: 13.5px;
+color: rgba(255,255,255,0.55);
+line-height: 1.7;
+font-weight: 300;
+}
+
+/* Contact form */
+.contact-form {
+background: rgba(255,255,255,0.04);
+border: 1px solid rgba(255,255,255,0.1);
+border-radius: 12px;
+padding: 40px;
+}
+
+.form-title {
+font-family: ‘Fraunces’, serif;
+font-size: 22px;
+font-weight: 600;
+color: var(–white);
+margin-bottom: 28px;
+}
+
+.form-row {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 16px;
+}
+
+.form-group {
+margin-bottom: 16px;
+}
+
+.form-group label {
+display: block;
+font-size: 12px;
+font-weight: 600;
+letter-spacing: 1px;
+text-transform: uppercase;
+color: rgba(255,255,255,0.45);
+margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+width: 100%;
+background: rgba(255,255,255,0.06);
+border: 1px solid rgba(255,255,255,0.12);
+border-radius: 6px;
+padding: 12px 16px;
+font-size: 14px;
+color: var(–white);
+font-family: ‘DM Sans’, sans-serif;
+transition: border-color 0.2s;
+outline: none;
+-webkit-appearance: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-color: var(–gold); }
+
+.form-group select option { background: var(–navy); color: var(–white); }
+
+.form-group textarea { resize: vertical; min-height: 110px; }
+
+.form-submit {
+width: 100%;
+background: var(–gold);
+color: var(–navy);
+border: none;
+padding: 14px;
+border-radius: 6px;
+font-size: 14px;
+font-weight: 700;
+font-family: ‘DM Sans’, sans-serif;
+cursor: pointer;
+transition: background 0.2s, transform 0.2s;
+margin-top: 8px;
+letter-spacing: 0.3px;
+}
+
+.form-submit:hover { background: var(–gold-light); transform: translateY(-1px); }
+
+/* ── FOOTER ── */
+footer {
+background: #080F1E;
+padding: 32px 5%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 16px;
+border-top: 1px solid rgba(201,168,76,0.15);
+}
+
+.footer-logo {
+font-family: ‘Fraunces’, serif;
+font-size: 17px;
+font-weight: 600;
+color: var(–white);
+}
+
+.footer-logo span { color: var(–gold); }
+
+.footer-copy {
+font-size: 12.5px;
+color: rgba(255,255,255,0.3);
+}
+
+.footer-links {
+display: flex;
+gap: 24px;
+}
+
+.footer-links a {
+font-size: 12.5px;
+color: rgba(255,255,255,0.4);
+text-decoration: none;
+transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(–gold); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+.nav-links { display: none; }
+.hero-inner, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+.services-grid { grid-template-columns: 1fr; }
+.about-stats { grid-template-columns: 1fr 1fr; }
+.form-row { grid-template-columns: 1fr; }
+.hero { padding-top: 100px; }
+footer { flex-direction: column; text-align: center; }
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+from { opacity: 0; transform: translateY(24px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-content > * {
+animation: fadeUp 0.7s ease forwards;
+opacity: 0;
+}
+
+.hero-tag { animation-delay: 0.1s; }
+.hero h1 { animation-delay: 0.2s; }
+.hero-desc { animation-delay: 0.3s; }
+.hero-btns { animation-delay: 0.4s; }
+.hero-card { animation: fadeUp 0.7s 0.35s ease forwards; opacity: 0; }
+</style>
+
+</head>
+<body>
+
+<!-- NAV -->
+
+<nav>
+  <div class="nav-logo">Vanguard<span>Advisory</span> SA</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-tag">Vanguard Advisory SA</div>
+      <h1>Expert advice.<br><em>Real results.</em><br>Accessible rates.</h1>
+      <p class="hero-desc">A multidisciplinary advisory firm offering legal documentation, warehousing and procurement consulting, career services, and specialist transfer pricing — all under one roof.</p>
+      <div class="hero-btns">
+        <a href="#services" class="btn-primary">Explore Our Services</a>
+        <a href="#contact" class="btn-secondary">Get in Touch</a>
+      </div>
+    </div>
+
+```
+<div class="hero-card">
+  <div class="hero-card-title">Our Qualifications</div>
+  <div class="credential-group">
+    <div class="credential-group-label">Academic</div>
+    <div class="credential-list">
+      <div class="credential-item">LLB — University of South Africa</div>
+      <div class="credential-item">B.Administration — University of the Free State</div>
+      <div class="credential-item">BCom Accounting — University of Johannesburg</div>
+      <div class="credential-item">BCom Hons Taxation — University of Johannesburg</div>
+    </div>
+  </div>
+  <div class="hero-divider"></div>
+  <div class="credential-group">
+    <div class="credential-group-label">Professional Experience</div>
+    <div class="credential-list">
+      <div class="credential-item">10+ Years Warehousing & Procurement</div>
+      <div class="credential-item">Big 4 Trained — EY, PwC, Forvis Mazars</div>
+      <div class="credential-item">INCOTERMS Certified</div>
+    </div>
+  </div>
+</div>
+```
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+  <div class="section-inner">
+    <div class="section-tag">About Us</div>
+    <h2 class="section-title">Two disciplines.<br><em>One firm.</em></h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Vanguard Advisory SA was founded on a simple belief — that <strong>professional expertise should be accessible</strong> to everyone, not just those who can afford large firm fees.</p>
+        <p>We bring together a <strong>qualified law graduate with over a decade of warehousing and procurement experience</strong>, and a <strong>Big 4-trained transfer pricing specialist</strong> with deep expertise from EY, PwC, and Forvis Mazars.</p>
+        <p>Together, we serve individuals, entrepreneurs, and small to medium businesses across South Africa — delivering the kind of advice that was once only available at a premium.</p>
+        <p>Based in <strong>Vereeniging, Gauteng</strong>. Serving clients across South Africa remotely and in person.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card">
+          <div class="stat-number">10<span>+</span></div>
+          <div class="stat-label">Years in warehousing & procurement operations</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">4</div>
+          <div class="stat-label">Professional service lines under one roof</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">R<span>120M</span></div>
+          <div class="stat-label">Warehouse inventory managed</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">Big<span>4</span></div>
+          <div class="stat-label">Transfer pricing experience at EY, PwC & Forvis Mazars</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+  <div class="section-inner">
+    <div class="section-tag">What We Offer</div>
+    <h2 class="section-title">Our <em>services</em></h2>
+    <p class="section-body">From legal documents to transfer pricing — we offer practical, affordable expertise that makes a real difference to your business or career.</p>
+
+```
+<div class="services-grid">
+
+  <!-- Legal -->
+  <div class="service-card">
+    <div class="service-number">01</div>
+    <div class="service-icon">⚖️</div>
+    <div class="service-title">Legal Document Services</div>
+    <p class="service-desc">Professionally drafted legal documents for businesses and individuals — without the law firm price tag. Fast turnaround, fully confidential.</p>
+    <div class="service-tags">
+      <span class="tag">Contract Drafting</span>
+      <span class="tag">NDAs</span>
+      <span class="tag">Employment Contracts</span>
+      <span class="tag">Supplier Agreements</span>
+      <span class="tag">Lease Reviews</span>
+      <span class="tag">CIPC Registration</span>
+      <span class="tag">Legal Opinions</span>
+    </div>
+    <div class="service-pricing">Starting from <strong>R500</strong> · Turnaround 1–7 days</div>
+  </div>
+
+  <!-- Procurement -->
+  <div class="service-card">
+    <div class="service-number">02</div>
+    <div class="service-icon">📦</div>
+    <div class="service-title">Procurement & Supply Chain Consulting</div>
+    <p class="service-desc">Real-world operational expertise from 10+ years managing large-scale warehousing and procurement. We help SMEs get their operations under control.</p>
+    <div class="service-tags">
+      <span class="tag">Procurement Reviews</span>
+      <span class="tag">Supplier Negotiations</span>
+      <span class="tag">Inventory Systems</span>
+      <span class="tag">Stock-take Planning</span>
+      <span class="tag">INCOTERMS Advisory</span>
+      <span class="tag">Warehouse Audits</span>
+    </div>
+    <div class="service-pricing">From <strong>R1,500</strong> once-off · Retainers from <strong>R2,500/mo</strong></div>
+  </div>
+
+  <!-- CV Writing -->
+  <div class="service-card">
+    <div class="service-number">03</div>
+    <div class="service-icon">📄</div>
+    <div class="service-title">CV Writing & Career Services</div>
+    <p class="service-desc">Professional CV rewrites and LinkedIn profile optimisation that help you stand out and land the opportunities you deserve.</p>
+    <div class="service-tags">
+      <span class="tag">CV Rewrite</span>
+      <span class="tag">LinkedIn Optimisation</span>
+      <span class="tag">Cover Letters</span>
+      <span class="tag">Full Career Package</span>
+    </div>
+    <div class="service-pricing">CV rewrites from <strong>R400</strong> · Full package from <strong>R800</strong></div>
+  </div>
+
+  <!-- Transfer Pricing -->
+  <div class="service-card">
+    <div class="service-number">04</div>
+    <div class="service-icon">🌍</div>
+    <div class="service-title">Transfer Pricing Advisory & Documentation</div>
+    <p class="service-desc">Specialist transfer pricing services backed by Big 4 experience. SARS-compliant documentation and advisory for businesses with cross-border related-party transactions.</p>
+    <div class="service-tags">
+      <span class="tag">Master File & Local File</span>
+      <span class="tag">Benchmarking Analysis</span>
+      <span class="tag">CbC Report Review</span>
+      <span class="tag">DMTT Calculations</span>
+      <span class="tag">TP Disclosure Forms</span>
+      <span class="tag">TP Health Check</span>
+      <span class="tag">Controversy Support</span>
+    </div>
+    <div class="service-pricing"><strong>Pricing available on request</strong> · Contact us for a free scoping call</div>
+  </div>
+
+</div>
+```
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <div class="section-tag">Get In Touch</div>
+    <h2 class="section-title">Let's work <em>together</em></h2>
+    <p class="section-body">Whether you're a small business, an entrepreneur, or an individual — we'd love to hear from you. First consultation is always free.</p>
+
+```
+<div class="contact-grid">
+  <div>
+    <div class="contact-info">
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div>
+          <div class="contact-item-label">Phone / WhatsApp</div>
+          <div class="contact-item-value">+27 79 130 8077</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div>
+          <div class="contact-item-label">Email</div>
+          <div class="contact-item-value">vanguardadvisorysa@gmail.com</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <div class="contact-item-label">Location</div>
+          <div class="contact-item-value">Vereeniging, Gauteng · Serving clients across South Africa</div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-note">
+      All services are delivered remotely via email and WhatsApp. Turnaround times are discussed and agreed upfront. Full confidentiality is guaranteed on every client engagement.
+    </div>
+  </div>
+
+  <div class="contact-form">
+    <div class="form-title">Send us a message</div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>First Name</label>
+        <input type="text" placeholder="Your first name">
+      </div>
+      <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" placeholder="Your last name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Email Address</label>
+      <input type="email" placeholder="your@email.com">
+    </div>
+    <div class="form-group">
+      <label>Service Interested In</label>
+      <select>
+        <option value="" disabled selected>Select a service</option>
+        <option>Legal Document Services</option>
+        <option>Procurement & Supply Chain Consulting</option>
+        <option>CV Writing & Career Services</option>
+        <option>Transfer Pricing Advisory & Documentation</option>
+        <option>Not sure — I need guidance</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Message</label>
+      <textarea placeholder="Tell us briefly what you need help with..."></textarea>
+    </div>
+    <button class="form-submit" onclick="alert('Thank you for your message! We will be in touch within 24 hours.')">Send Message →</button>
+  </div>
+</div>
+```
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="footer-logo">Vanguard<span>Advisory</span> SA</div>
+  <div class="footer-copy">© 2025 Vanguard Advisory SA · All rights reserved</div>
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>
